@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AcadTrack | Smart Attendance Analytics</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <!-- LEFT : Branding -->
+        <div class="brand">
+            <h1>AcadTrack</h1>
+            <p>
+                Smart attendance analytics and <br>
+                dropout risk prediction system
+            </p>
+        </div>
+
+        <!-- RIGHT : Login Card -->
+        <div class="login-card">
+            <h2>Login</h2>
+
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="login()">Sign In</button>
+            <select id="role">
+    <option value="student">Student</option>
+    <option value="faculty">Faculty</option>
+</select>
+
+
+            <p id="error"></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>

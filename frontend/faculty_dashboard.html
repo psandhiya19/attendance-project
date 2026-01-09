@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Analytics Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>📊 EduTrack</h2>
+    <ul>
+        <li onclick="showOverview()">Overview</li>
+        <li onclick="showMarkAttendance()">Mark Attendance</li>
+        <li onclick="logout()">Logout</li>
+    </ul>
+</div>
+<div id="markAttendanceSection" style="display:none">
+    <h2>📝 Mark Attendance</h2>
+
+    <label>Subject:</label>
+    <select id="markSubject">
+        <option>Machine Learning</option>
+        <option>Web Technology</option>
+        <option>Operating System</option>
+        <option>Software Engineering</option>
+        <option>Generative AI</option>
+    </select>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="markAttendanceTable"></tbody>
+    </table>
+
+    <button onclick="submitAttendance()">Save Attendance</button>
+</div>
+
+
+<div class="main" id="overviewSection">
+   <h1>Faculty Dashboard</h1>
+
+
+
+
+<label>Select Subject:</label>
+<select id="subjectSelect" onchange="loadFacultyData()">
+    <option>Machine Learning</option>
+    <option>Web Technology</option>
+    <option>Operating System</option>
+    <option>Software Engineering</option>
+    <option>Generative AI</option>
+</select>
+
+<table width="100%" border="1">
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Student Name</th>
+    <th>Department</th>
+    <th>Attendance %</th>
+    <th>Status</th>
+</tr>
+</thead>
+<tbody id="facultyTable"></tbody>
+</table>
+
+<script src="js/faculty.js"></script>
+
+
+</body>
+</html>
